@@ -47,7 +47,9 @@ export default {
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
   */
-  axios: {},
+  axios: {
+    baseURL: 'https://my-json-server.typicode.com/irbis999/media-admin',
+  },
   auth: {
     redirect: {
       logout: '/login',
@@ -55,9 +57,9 @@ export default {
     strategies: {
       local: {
         endpoints: {
-          login: { url: 'http://localhost:4000/login', method: 'get', propertyName: 'token' },
-          logout: { url: 'http://localhost:4000/logout', method: 'get' },
-          user: { url: 'http://localhost:4000/user', method: 'get', propertyName: 'user' },
+          login: { url: '/login', method: 'get', propertyName: 'token' },
+          logout: { url: '/logout', method: 'get' },
+          user: { url: '/user', method: 'get', propertyName: 'user' },
         },
       },
     },
