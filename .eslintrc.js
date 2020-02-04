@@ -19,5 +19,6 @@ module.exports = {
     quotes: ['warn', 'single'],
     'comma-dangle': ['warn', 'always-multiline'],
     'no-console': 'off',
+    curly: ['error', 'multi'],
   },
 }

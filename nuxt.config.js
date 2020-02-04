@@ -49,6 +49,9 @@ export default {
   */
   axios: {},
   auth: {
+    redirect: {
+      logout: '/login',
+    },
     strategies: {
       local: {
         endpoints: {

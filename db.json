@@ -1,11 +1,12 @@
 {
   "user": {
-    "id": 1
+    "user": {
+      "id": 1,
+      "name": "Alex"
+    }
   },
   "login": {
-    "user": {
-      "id": 1
-    }
+    "token": "dfjk348dfjksd239dffdfik"
   },
   "logout": {}
 }
