@@ -1,9 +1,12 @@
 <template lang="pug">
-  form(@submit.prevent="signIn")
-    h1 login
-    div {{$auth.user}}
-    input(placeholder="Email" v-model="username" required)
-    input(placeholder="Пароль" v-model="password" required)
+  form.login(@submit.prevent="signIn")
+    h1 Авторизация
+    .form-input
+      .input-title Email
+      input(placeholder="Email" v-model="username" required)
+    .form-input
+      .input-title Пароль
+      input(placeholder="Пароль" v-model="password" required)
     button Войти
 </template>
 
@@ -34,3 +37,34 @@ export default {
   layout: 'login',
 }
 </script>
+
+<style lang="sass" scoped>
+.login
+  padding: 10px
+  margin: 0 auto
+  max-width: 300px
+.form-input
+  margin-bottom: 15px
+  input
+    display: block
+    width: 100%
+    border-radius: 4px
+    border: 1px solid #ccc
+    padding: 7px 10px
+    background: transparent
+    box-sizing: border-box
+  .input-title
+    font-weight: bold
+    margin-bottom: 5px
+button
+  width: 100%
+  display: block
+  box-sizing: border-box
+  border-radius: 4px
+  padding: 7px 0
+  color: white
+  cursor: pointer
+  background: cornflowerblue
+  border: none
+  margin-top: 20px
+</style>
